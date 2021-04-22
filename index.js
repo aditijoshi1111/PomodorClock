@@ -48,7 +48,7 @@
             startpause1.innerHTML="Start";
             countdown.innerHTML=work+":00";
             countdown.style.color="skyblue";
-            // document.getElementsByClassName("time")[0].style.borderColor="skyblue";
+            document.getElementsByClassName("time")[0].style.borderColor="skyblue";
             resetstart=true;
             b1.disabled=false;
             b2.disabled=false;
@@ -92,8 +92,8 @@
 
             if(--timer<0){
               clearInterval(x);
-            //   var audio=new Audio("beep-01a.mp3");
-            //   audio.play();
+              var audio=new Audio("beep-01a.mp3");
+              audio.play();
               console.log(workbreakcounter+" before");
               if((workbreakcounter++)%2===0){
                   countdown.style.color="#de6834";
@@ -103,8 +103,8 @@
               console.log(workbreakcounter+" br");
               }
               else {
-                //   var audio=new Audio("beep-01a.mp3");
-                //   audio.play();
+                  var audio=new Audio("beep-01a.mp3");
+                  audio.play();
                   countdown.style.color="skyblue";
                   document.getElementsByClassName("time")[0].style.borderColor="skyblue";
                 start(work);
